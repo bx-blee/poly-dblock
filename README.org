@@ -1,0 +1,106 @@
+#+title:  poly-dblock
+#+OPTIONS: toc:4
+
+*poly-dblock*: Extension of org-dblock to authorship-major-modes
+
+*poly-dblock* is an Emacs package for extending org-dblock capabilities in
+various authorship-major-modes. The scope of this package is limited to
+specifying reg-exp for dblock BEGIN and END-s in various major-modes.
+With appropriate setting  of /org-dblock-start-re/ and  /org-dblock-end-re/,
+you can run /org-dblock-update/ outside of org-files.
+
+* Table Of Contents     :TOC:
+- [[#uses-of-poly-dblock][Uses Of poly-dblock]]
+- [[#currently-supported--major-modes][Currently Supported  Major-Modes]]
+  - [[#elisp-emacs-lisp-mode][Elisp (emacs-lisp-mode)]]
+  - [[#python-python-mode][Python (python-mode)]]
+  - [[#bash-sh-mode][Bash (sh-mode)]]
+  - [[#latex-latex-mode][LaTeX (latex-mode)]]
+  - [[#html-html-mode][HTML (html-mode)]]
+
+* Uses Of poly-dblock
+
+With poly-dblock, you can profit from dblock capabilities in various major-modes.
+
+This then can be used to provide for centrally managed segments to appear in your files.
+
+You can for example use dblocks as visible macros in languages that have weak support for macros.
+
+You can for example use dblocks to manage copyright blocks in your program files.
+
+Poly-dblock can be combined with the COMEEGA package to allow for unit testing.
+
+* Currently Supported  Major-Modes
+
+
+At this time we provide support for the following programming languages and
+authorship activities.
+
+|-----------------------+----------------------+-------------------|
+| authorship-major-mode | Comment Block syntax | Doc-String Syntax |
+|-----------------------+----------------------+-------------------|
+|-----------------------+----------------------+-------------------|
+| emacs-lisp-mode       | (orgCmntBegin        | " #+org_begin     |
+| emacs-lisp-mode       | orgCmntEnd)          | #+org_end ""      |
+|-----------------------+----------------------+-------------------|
+| python-mode           | """#+org_begin       | """#+org_begin    |
+| python-mode           | """#+org_begin       | """#+org_begin    |
+|-----------------------+----------------------+-------------------|
+| sh-mode               |                      |                   |
+| sh-mode               |                      |                   |
+|-----------------------+----------------------+-------------------|
+| latex-mode            |                      |                   |
+| latex-mode            |                      |                   |
+|-----------------------+----------------------+-------------------|
+| html-mode             |                      |                   |
+| html-mode             |                      |                   |
+|-----------------------+----------------------+-------------------|
+
+
+** Elisp (emacs-lisp-mode)
+
+
+This authorship-major-mode's org-dynamic-block comment prefix syntax is:
+
+- open: #+org_dblockNOTYET
+- close: #+org_dblockNOTYET
+
+** Python (python-mode)
+
+
+This authorship-major-mode's org-dynamic-block comment prefix syntax is:
+
+- open: #+org_dblockNOTYET
+- close: #+org_dblockNOTYET
+
+** Bash (sh-mode)
+
+Bash's here-document feature is used to provide block-comments.
+
+This authorship-major-mode's org-mode comment block syntax is:
+- open: (orgCmntBegin
+- close: orgCmntEnd)
+
+This authorship-major-mode's org-mode doc-string syntax is:
+- open: #+org_begin
+- close: #+org_end
+
+These are specified in comeega-poly-elisp.el.
+
+This authorship-major-mode's org-dynamic-block comment prefix syntax is:
+
+- open: #+org_dblockNOTYET
+- close: #+org_dblockNOTYET
+
+** LaTeX (latex-mode)
+
+
+This authorship-major-mode's org-dynamic-block comment prefix syntax is:
+
+- open: #+org_dblockNOTYET
+- close: #+org_dblockNOTYET
+
+
+** HTML (html-mode)
+
+TO BE DOCUMENTED

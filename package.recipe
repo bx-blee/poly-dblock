@@ -1,0 +1,4 @@
+(comeega
+  :fetcher github
+  :repo "bx-blee/poly-dblock"
+  :files ("*.el" "examples"))
